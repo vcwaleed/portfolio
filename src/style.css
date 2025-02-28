@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@theme {
+    --color-pri_col: #519856;
+    --color-sec_col: #a8dcab;
+    --color-text_col:#ffffff;
+    --color-btn_col:#dba9a6;
+    --color-hov_col:#BF91BE;
+  }
