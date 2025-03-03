@@ -3,7 +3,7 @@
     <div
       class="max-w-screen-xl flex flex-wrap items-center  justify-around md:justify-evenly gap-4 mx-auto p-4"
     >
-    <span class="text-white flex font-bold text-3xl">{{about.nickname}}<img src="../../public/developer.svg" width="25" /></span>
+    <span class="text-white flex font-bold text-3xl">{{about.nickname}}<img src="/developer.svg" width="25" /></span>
       <button
         @click="toggleMenu"
         type="button"

@@ -1,17 +1,17 @@
 <template>
-  <section class="flex p-4 flex-col-reverse md:flex-row items-center justify-center bg-sec_col border border-gray-200 gap-4 shadow-sm">
+  <section class="flex p-4 flex-col-reverse md:flex-row items-center justify-center bg-sec_col gap-4 ">
     <div class="font-mono md:w-1/2">
-      <div class="text-white text-5xl font-bold mb-4">
+      <div class="text-text_dec_black text-5xl font-bold mb-4">
         <span>I'm {{ about.name }}</span>
       </div>
       <span class="text-btn_col text-4xl font-bold">{{ about.designation }}</span>
-      <span class="text-white text-4xl font-bold pl-3">{{ about.type }}</span>
-      <div class="text-white font-semibold text-lg mt-4">
+      <span class="text-text_dec_black text-4xl font-bold pl-3">{{ about.type }}</span>
+      <div class="text-text_dec_black font-semibold text-lg mt-4">
         <span>{{ about.description }}</span>
       </div>
       <button 
         @click="openWhatsApp"
-        class="bg-btn_col p-3 hover:border-btn_col rounded text-white hover:bg-white hover:text-btn_col transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"
+        class="bg-pri_col p-3  mt-2 rounded text-text_col hover:border-blue-950 hover:bg-btn_col hover:text-white transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"
       >
         Contact Me
       </button>
