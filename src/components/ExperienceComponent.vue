@@ -1,5 +1,5 @@
 <template>
-    <section class="flex bg-sec_col p-4 md:p-8 flex-col md:flex-row items-center justify-center gap-40 font-mono">
+    <section class="flex bg-sec_col p-4 md:p-8 flex-col md:flex-row items-center justify-center gap-40 font-display">
       <div class="w-full max-w-lg">
         <span class="text-5xl font-semibold">Proficiency</span>
         <div class="w-full mt-6">

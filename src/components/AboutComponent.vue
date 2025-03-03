@@ -1,12 +1,12 @@
 <template>
   <section class="flex p-4 flex-col-reverse md:flex-row items-center justify-center bg-sec_col gap-4 ">
-    <div class="font-mono md:w-1/2">
+    <div class="font-display md:w-1/2">
       <div class="text-text_dec_black text-5xl font-bold mb-4">
         <span>I'm {{ about.name }}</span>
       </div>
       <span class="text-btn_col text-4xl font-bold">{{ about.designation }}</span>
       <span class="text-text_dec_black text-4xl font-bold pl-3">{{ about.type }}</span>
-      <div class="text-text_dec_black font-semibold text-lg mt-4">
+      <div class="text-text_dec_black  text-lg mt-4">
         <span>{{ about.description }}</span>
       </div>
       <button 
@@ -25,12 +25,10 @@
 <script>
 import { ref } from "vue";
 import { aboutData } from "../setup";
-
 export default {
   name: "AboutComponent",
   setup() {
     const about = ref(aboutData);
-
     const openWhatsApp = () => {
       const message = encodeURIComponent("Hello Talha, I want to connect with you!");
       window.open(`https://wa.me/${about.value.phoneNumber}?text=${message}`, "_blank");

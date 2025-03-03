@@ -1,16 +1,15 @@
 <template>
-  <nav class="bg-pri_col  dark:bg-gray-900">
+  <nav class="bg-pri_col dark:bg-gray-900">
     <div
-      class="max-w-screen-xl flex flex-wrap items-center  justify-around md:justify-evenly gap-4 mx-auto p-4"
+      class="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-evenly gap-4 mx-auto p-4"
     >
-    <span class="text-white flex font-bold text-3xl">{{about.nickname}}<img src="/developer.svg" width="25" /></span>
+      <span class="text-white flex font-bold text-3xl font-display"
+        >{{ about.nickname }}<img src="/developer.svg" width="25"
+      /></span>
       <button
         @click="toggleMenu"
         type="button"
-        class="inline-flex items-center  w-10 h-10 justify-center text-sm
-         text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none 
-         focus:ring-2 focus:ring-white 
-         "
+        class="inline-flex items-center w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white"
         aria-controls="navbar-default"
         :aria-expanded="isMenuOpen"
       >
@@ -41,18 +40,16 @@
         id="navbar-default"
       >
         <ul
-          class="font-medium flex flex-col p-4 md:p-0 mt-4 text-white
-           rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse
-            md:mt-0  "
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 text-white rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"
         >
-          <li v-for="(link,index) in navLinks" :key="index">
+          <li v-for="(link, index) in navLinks" :key="index">
             <a
-              :href="link.href"
-              class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100  md:border-0
-               md:hover:bg-hov_col md:p-2 font-mono">
-               {{ link.name }}
-               </a
+              href="#"
+              @click.prevent="scrollToSection(link.href)"
+              class="block py-2 px-3 text-white rounded-sm hover:bg-gray-100 md:border-0 md:hover:bg-hov_col md:p-2 font-display"
             >
+              {{ link.name }}
+            </a>
           </li>
         </ul>
       </div>
@@ -72,18 +69,24 @@ export default {
       isMenuOpen.value = !isMenuOpen.value;
     };
     const navLinks = [
-      { name: "Skills", href: "/skills" },
-      { name: "Projects", href: "/Projects" },
-      { name: "Work Experiences", href: "/experiences" },
-      { name: "Open Source", href: "/opensource" },
-      { name: "Contact Me", href: "/contact" },
+      { name: "Skills", href: "#skills" },
+      { name: "Work Experiences", href: "#work" },
+      { name: "Open Source", href: "#opensource" },
+      { name: "Contact Me", href: "#contact" },
     ];
+    const scrollToSection = (id) => {
+      const section = document.querySelector(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
 
     return {
       isMenuOpen,
       toggleMenu,
       navLinks,
       about,
+      scrollToSection ,
     };
   },
 };

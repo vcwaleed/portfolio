@@ -8,3 +8,6 @@
     --color-hov_col:#BF91BE;
     --color-text_dec_black:#838383;
   }
+  @theme {
+    --font-display: "Oswald", "sans-serif"; 
+  }

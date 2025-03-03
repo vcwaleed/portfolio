@@ -1,5 +1,5 @@
 <template>
-<section class="flex bg-sec_col p-4 md:p-8 flex-col-reverse md:flex-row items-center justify-center gap-40 font-mono">
+<section class="flex bg-sec_col p-4 md:p-8 flex-col-reverse md:flex-row items-center justify-center gap-40 font-display">
     <div ref="animationContainer" class="w-[250px] h-[250px] md:w-[400px] md:h-[400px]"></div>
     <div>
         <h1 class="text-3xl font-bold mb-4">What I do</h1>
@@ -18,14 +18,13 @@
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB Logo" width="50">
           <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL Logo"   width="50">
         </div>
-        <div class="description text-left mt-12 max-w-3xl mx-auto text-gray-700 ">
+        <div class="description text-left mt-12 max-w-3xl mx-auto text-gray-600 ">
             <p class="mb-2">⚡ Develop robust and scalable frontend applications.</p>
             <p class="mb-2">⚡ Build engaging user interfaces with modern JavaScript frameworks.</p>
             <p class="mb-2">⚡ Craft efficient backend solutions with Node.js and Firebase.</p>
             <p>⚡ I value clean, maintainable code and delivering exceptional user experiences.</p>
         </div>
     </div>
-
 </section>
 </template>
 

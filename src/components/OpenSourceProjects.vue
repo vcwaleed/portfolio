@@ -1,6 +1,6 @@
 <template>
     <section class="flex items-center flex-col p-8">
-      <span class="text-5xl font-bold font-mono mb-6">Open Source Projects</span>
+      <span class="text-5xl font-bold font-display mb-6">Open Source Projects</span>
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div 
           v-for="project in selectedProjects" 
