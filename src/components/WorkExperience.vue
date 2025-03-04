@@ -10,13 +10,6 @@
         :key="index"
         class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 flex flex-col"
       >
-        <div class="relative h-28 bg-pri_col flex justify-center items-center">
-          <img
-            :src="job.company_image"
-            alt="Company Logo"
-            class="h-20 w-20 rounded-full border-4 border-white shadow-md object-cover absolute -bottom-10"
-          />
-        </div>
         <div class="pt-14 pb-6 px-6 text-center flex flex-col flex-grow">
           <h3 class="text-xl font-bold text-gray-800">{{ job.companyname }}</h3>
           <p class="text-pri_col font-medium">{{ job.designation }}</p>
