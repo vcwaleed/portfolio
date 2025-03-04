@@ -3,7 +3,7 @@ export const aboutData = {
     name: "Talha Waleed",
     designation: "Front-end",
     type:"Developer",
-    description: "  Hi, I'm Talha Waleed, a passionate front-end developer.I have been working in the field of web development for the past 2 years. I have experience in React, Next, and Vue.js. I have worked on various projects and have a good understanding of web development.",
+    description: "I am Talha Waleed, a Computer Science graduate with a strong passion for solving complex technological challenges. With expertise in React, Next.js, and Vue.js, I have worked on various projects, gaining in-depth knowledge of modern web development. I am committed to building scalable, efficient, and user-centric applications while continuously expanding my skill set in the ever-evolving tech landscape.",
     image: "/src/assets/person.png", 
     phoneNumber: "923065167490",
     githublink:"https://github.com/vcwaleed",

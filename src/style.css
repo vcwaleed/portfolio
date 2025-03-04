@@ -5,9 +5,10 @@
     --color-sec_col:#ffffff;
     --color-text_col:#ffffff;
     --color-btn_col:#dba9a6;
-    --color-hov_col:#BF91BE;
+    --color-hov_col:#2E8B57;
     --color-text_dec_black:#838383;
+    --color-text_heading: #008080;
   }
   @theme {
-    --font-display: "Oswald", "sans-serif"; 
+    --font-display: "League Spartan"; 
   }

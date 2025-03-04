@@ -6,7 +6,6 @@
           Feel free to reach out if you have a project in mind, or even just to say hello.
         </span>
         <span class="text-sm text-white ">Open for opportunities: Yes</span>
-  
         <div class="mt-4">
           <h3 class="text-lg text-white font-semibold mb-2">Contact Me</h3>
           <div class="flex space-x-6">

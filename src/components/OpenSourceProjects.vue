@@ -1,7 +1,7 @@
 <template>
     <section class="flex items-center flex-col p-8">
-      <span class="text-5xl font-bold font-display mb-6">Open Source Projects</span>
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <span class="text-5xl font-bold font-display mb-6 text-text_heading">Open Source Projects</span>
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
         <div 
           v-for="project in selectedProjects" 
           :key="project.id"
@@ -18,21 +18,20 @@
           </a>
         </div>
       </section>
-      <button
-        @click="openGithub"
-        class="bg-pri_col p-3 px-12 mt-6 rounded text-text_col hover:border-blue-950 hover:bg-btn_col hover:text-white transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"
-      >
-        MORE PROJECTS
-      </button>
+      <BaseButton :onClick="openGithub">
+  MORE PROJECTS →
+</BaseButton>
     </section>
   </template>
   
   <script>
   import { ref, onMounted } from "vue";
   import { aboutData } from "../setup";
+  import BaseButton from "./BaseButton.vue";
   
   export default {
     name: "OpenSourceProjects",
+    components:{BaseButton },
     setup() {
       const about = ref(aboutData);
       const selectedProjects = ref([]);

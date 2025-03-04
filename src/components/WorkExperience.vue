@@ -1,10 +1,10 @@
 <template>
-  <section class="flex flex-col p-6 sm:p-12 lg:px-28 min-h-screen font-display">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center sm:text-left">
+  <section class="flex flex-col   p-6 sm:p-12 lg:px-28 min-h-screen font-display">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-6  sm:text-left  md:text-center text-text_heading">
       Work Experiences
     </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-7xl mx-auto ">
       <div
         v-for="(job, index) in experiences"
         :key="index"
@@ -33,7 +33,7 @@
             <span
               v-for="(skill, i) in job.skill_set.split(',')"
               :key="i"
-              class="px-3 py-1 bg-indigo-100 text-indigo-600 text-sm font-medium rounded-full"
+              class="px-3 py-1  text-gray-600 bg-gray-100  hover:underline hover:cursor-copy text-sm font-medium "
             >
               {{ skill.trim() }}
             </span>
