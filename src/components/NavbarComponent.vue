@@ -1,11 +1,12 @@
 <template>
-  <nav class="bg-pri_col dark:bg-gray-900">
+  <nav class="bg-pri_col fixed top-0 left-0 w-full z-50 dark:bg-gray-900">
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-around  lg:gap-62  mx-auto p-3"
+      class="max-w-screen-xl flex flex-wrap items-center justify-around lg:gap-62 mx-auto p-3"
     >
-      <span class="text-white flex font-bold text-3xl font-display"
-        >{{ about.nickname }}<img src="/developer.svg" width="25"
-      /></span>
+      <span class="text-white flex font-bold text-3xl font-display">
+        {{ about.nickname }}
+        <img src="/developer.svg" width="25" />
+      </span>
       <button
         @click="toggleMenu"
         type="button"
@@ -60,24 +61,29 @@
 <script>
 import { ref } from "vue";
 import { aboutData } from "../setup";
+
 export default {
   name: "NavbarComponent",
   setup() {
     const about = ref(aboutData);
     const isMenuOpen = ref(false);
+
     const toggleMenu = () => {
       isMenuOpen.value = !isMenuOpen.value;
     };
+
     const navLinks = [
       { name: "Skills", href: "#skills" },
       { name: "Work Experiences", href: "#work" },
       { name: "Open Source", href: "#opensource" },
       { name: "Contact Me", href: "#contact" },
     ];
+
     const scrollToSection = (id) => {
       const section = document.querySelector(id);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
+        isMenuOpen.value = false; // Close menu after clicking a link
       }
     };
 
@@ -86,7 +92,7 @@ export default {
       toggleMenu,
       navLinks,
       about,
-      scrollToSection ,
+      scrollToSection,
     };
   },
 };

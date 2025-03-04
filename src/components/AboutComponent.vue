@@ -1,5 +1,5 @@
 <template>
-<section class="flex p-4 flex-col-reverse md:flex-row items-center justify-center bg-sec_col gap-4">
+<section class="flex p-4 flex-col-reverse md:flex-row items-center justify-center bg-sec_col gap-4   mt-14">
     <div class="font-display md:w-1/2">
         <div class="text-text_dec_black text-5xl font-bold mb-4 ">
             <span>I'm {{ about.name }}</span>
@@ -13,7 +13,9 @@
         <div class="text-text_dec_black text-lg mt-4">
             <span>{{ about.description }}</span>
         </div>
+        <div class="flex justify-center md:justify-normal">
         <BaseButton :onClick="openWhatsApp"> Contact Me →</BaseButton>
+    </div>
     </div>
     <div ref="animationContainer" class="w-[250px] h-[250px] md:w-[400px] md:h-[400px]"></div>
 </section>

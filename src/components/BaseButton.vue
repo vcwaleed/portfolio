@@ -1,5 +1,5 @@
 <template>
-<button @click="onClick" :class="computedClasses" class="p-2  px-9 rounded transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer">
+<button @click="onClick" :class="computedClasses" class="p-2 px-28 md:px-9 rounded transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer">
     <slot></slot>
 </button>
 </template>

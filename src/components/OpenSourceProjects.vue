@@ -5,7 +5,7 @@
         <div 
           v-for="project in selectedProjects" 
           :key="project.id"
-          class="bg-sec_col p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 w-80"
+          class="bg-sec_col p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 w-70"
         >
           <h2 class="text-xl font-semibold text-gray-800">{{ project.name || "no name " }}</h2>
           <p class="text-sm text-gray-300 mt-2">{{ project.description || "Visit to explore the repo" }}</p>
@@ -19,7 +19,7 @@
         </div>
       </section>
       <BaseButton :onClick="openGithub">
-  MORE PROJECTS →
+  MORE PROJECTS 
 </BaseButton>
     </section>
   </template>

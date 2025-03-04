@@ -1,5 +1,5 @@
 <template>
-<section class="flex bg-sec_col p-4 md:p-8 flex-col-reverse md:flex-row items-center justify-center gap-56 font-display">
+<section class="flex bg-sec_col p-4 md:p-8 flex-col-reverse md:flex-row items-center justify-center md:gap-56 font-display">
     <div ref="animationContainer" class="w-[250px] h-[250px] md:w-[400px] md:h-[400px]"></div>
     <div>
         <h1 class="text-3xl font-bold mb-4 text-text_heading">What I do</h1>
