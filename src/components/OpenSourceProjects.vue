@@ -19,7 +19,7 @@
         </div>
       </section>
       <BaseButton :onClick="openGithub">
-  MORE PROJECTS 
+  MORE REPO
 </BaseButton>
     </section>
   </template>
