@@ -1,7 +1,7 @@
 <template>
 <section class="flex p-4 flex-col-reverse md:flex-row items-center justify-center bg-sec_col gap-4   mt-14">
     <div class="font-display md:w-1/2">
-        <div class="text-text_dec_black text-5xl font-bold mb-4 ">
+        <div class="text-text_dec_black text-3xl md:text-5xl font-bold mb-4 ">
             <span>I'm {{ about.name }}</span>
         </div>
         <span class="text-pri_col text-3xl font-bold">{{

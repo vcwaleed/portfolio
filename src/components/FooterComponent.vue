@@ -7,18 +7,18 @@
         </span>
         <span class="text-sm text-white ">Open for opportunities: Yes</span>
         <div class="mt-4">
-          <h3 class="text-lg text-white font-semibold mb-2">Contact Me</h3>
+          <h3 class="text-lg text-b font-black semibold mb-2">Contact Me</h3>
           <div class="flex space-x-6">
-            <a :href="'mailto:' + about.email" target="_blank" class="text-white hover:text-gray-300 text-2xl">
+            <a :href="'mailto:' + about.email" target="_blank" class="text-black hover:text-gray-300 text-2xl">
               <Mail class="w-6 h-6" />
             </a>
-            <a :href="about.githublink" target="_blank" class="text-white hover:text-gray-300 text-2xl">
+            <a :href="about.githublink" target="_blank" class="text-black hover:text-gray-300 text-2xl">
               <Github class="w-6 h-6" />
             </a>
-            <a :href="about.linkedin" target="_blank" class="text-white hover:text-gray-300 text-2xl">
+            <a :href="about.linkedin" target="_blank" class="text-black hover:text-gray-300 text-2xl">
               <Linkedin class="w-6 h-6" />
             </a>
-            <a :href="'https://wa.me/' + about.phoneNumber" target="_blank" class="text-white hover:text-gray-300 text-2xl">
+            <a :href="'https://wa.me/' + about.phoneNumber" target="_blank" class="text-black hover:text-gray-300 text-2xl">
               <Phone class="w-6 h-6" />
             </a>
           </div>
