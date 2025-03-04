@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-pri_col dark:bg-gray-900">
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-around  md:justify-between  gap-62 mx-auto p-3"
+      class="max-w-screen-xl flex flex-wrap items-center justify-around  lg:gap-62  mx-auto p-3"
     >
       <span class="text-white flex font-bold text-3xl font-display"
         >{{ about.nickname }}<img src="/developer.svg" width="25"
