@@ -1,6 +1,6 @@
 <template>
-    <section class="bg-pri_col flex flex-col md:flex-row items-center justify-between font-display p-10">
-      <div class="flex flex-col w-full md:w-[50%] space-y-4">
+    <section class="bg-pri_col flex flex-col md:flex-row items-center justify-between font-display p-6">
+      <div class="flex flex-col w-full md:w-[50%] ">
         <span class="text-4xl text-text_col font-bold">Reach Out to Me!</span>
         <span class="text-white ">
           Feel free to reach out if you have a project in mind, or even just to say hello.

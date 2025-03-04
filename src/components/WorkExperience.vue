@@ -4,7 +4,7 @@
       Work Experiences
     </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full max-w-7xl mx-auto ">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full max-w-5xl mx-auto ">
       <div
         v-for="(job, index) in experiences"
         :key="index"
