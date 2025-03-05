@@ -1,13 +1,13 @@
 <template>
     <section class="flex items-center flex-col p-8">
-      <span class="text-5xl font-bold font-display mb-6 text-text_heading">Open Source Projects</span>
+      <span class="text-5xl font-bold font-display mb-6 text-pri_col">Open Source Projects</span>
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
         <div 
           v-for="project in selectedProjects" 
           :key="project.id"
           class="bg-sec_col p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 w-70"
         >
-          <h2 class="text-xl font-semibold text-gray-800">{{ project.name || "no name " }}</h2>
+          <h2 class="text-xl font-semibold text-gray-500">{{ project.name || "no name " }}</h2>
           <p class="text-sm text-gray-300 mt-2">{{ project.description || "Visit to explore the repo" }}</p>
           <a 
             :href="project.html_url" 

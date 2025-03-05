@@ -7,19 +7,19 @@
         </span>
         <span class="text-sm text-white ">Open for opportunities: Yes</span>
         <div class="mt-4">
-          <h3 class="text-lg text-b font-black semibold mb-2">Contact Me</h3>
+          <h3 class="text-lg text-b text-white semibold mb-2">Contact Me</h3>
           <div class="flex space-x-6">
-            <a :href="'mailto:' + about.email" target="_blank" class="text-black hover:text-gray-300 text-2xl">
+            <a :href="'mailto:' + about.email" target="_blank" class="text-red-500 hover:text-gray-300 text-2xl">
               <Mail class="w-6 h-6" />
             </a>
             <a :href="about.githublink" target="_blank" class="text-black hover:text-gray-300 text-2xl">
               <Github class="w-6 h-6" />
             </a>
-            <a :href="about.linkedin" target="_blank" class="text-black hover:text-gray-300 text-2xl">
+            <a :href="about.linkedin" target="_blank" class="text-blue-500 hover:text-gray-300 text-2xl">
               <Linkedin class="w-6 h-6" />
             </a>
-            <a :href="'https://wa.me/' + about.phoneNumber" target="_blank" class="text-black hover:text-gray-300 text-2xl">
-              <Phone class="w-6 h-6" />
+            <a :href="'https://wa.me/' + about.phoneNumber" target="_blank" class="text-orange-500 hover:text-gray-300 text-2xl">
+              <PhoneCall class="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -33,12 +33,12 @@
   
   <script>
   import { ref, onMounted } from "vue";
-  import { Mail, Github, Linkedin, Phone } from "lucide-vue-next";
+  import { Mail, Github, Linkedin, PhoneCall} from "lucide-vue-next";
   import { aboutData } from "../setup";
   
   export default {
     name: "FooterComponent",
-    components: { Mail, Github, Linkedin, Phone },
+    components: { Mail, Github, Linkedin, PhoneCall },
     setup() {
       const about = ref(aboutData);
       const githubProfileImage = ref("");

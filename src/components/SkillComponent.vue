@@ -2,7 +2,7 @@
 <section class="flex bg-sec_col p-4 md:p-8 flex-col-reverse md:flex-row items-center justify-center md:gap-56 font-display">
     <div ref="animationContainer" class="w-[250px] h-[250px] md:w-[400px] md:h-[400px]"></div>
     <div>
-        <h1 class="text-3xl font-bold mb-4 text-text_heading">What I do</h1>
+        <h1 class="text-3xl font-bold mb-4 text-pri_col">What I do</h1>
         <h2 class="text-xl mb-8 font-semibold text-gray-700">Software Engineer & Frontend Developer</h2>
         <div class="grid grid-cols-7 gap-y-5 ">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo" width="50">

@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-col   p-6 sm:p-12 lg:px-28 min-h-screen font-display">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-6  sm:text-left  md:text-center text-text_heading">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-6  sm:text-left  md:text-center text-pri_col">
       Work Experiences
     </h2>
 
