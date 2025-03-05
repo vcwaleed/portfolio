@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-pri_col fixed top-0 left-0 w-full z-50 dark:bg-gray-900">
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-around lg:gap-62 mx-auto p-3"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between md:justify-around lg:gap-62 mx-auto p-3"
     >
       <span class="text-white flex font-bold text-xl md:text-3xl font-display">
         {{ about.nickname }}
