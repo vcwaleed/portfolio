@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <div class="bg-pri_col">
+    <router-view/>
+  </div>
 </template>
 <script>
 export default {

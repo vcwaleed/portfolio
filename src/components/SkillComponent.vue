@@ -1,9 +1,9 @@
 <template>
-<section class="flex bg-sec_col p-4 md:p-8 flex-col-reverse md:flex-row items-center justify-center md:gap-56 font-display">
+<section class="flex p-4 md:p-8 flex-col-reverse md:flex-row-reverse items-center justify-center md:gap-56 font-display px-10">
     <div ref="animationContainer" class="w-[250px] h-[250px] md:w-[400px] md:h-[400px]"></div>
     <div>
-        <h1 class="text-3xl font-bold mb-4 text-pri_col">What I do</h1>
-        <h2 class="text-xl mb-8 font-semibold text-gray-700">Software Engineer & Frontend Developer</h2>
+        <h1 class="text-3xl font-bold mb-4 text-btn_col">What I do</h1>
+        <h2 class="text-xl mb-8 font-semibold text-text_col">Software Engineer & Frontend Developer</h2>
         <div class="grid grid-cols-7 gap-y-5 ">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo" width="50">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo" width="50">
@@ -18,7 +18,7 @@
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB Logo" width="50">
           <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL Logo"   width="50">
         </div>
-        <div class="description text-left mt-12 max-w-3xl mx-auto text-gray-600 ">
+        <div class="description text-left mt-12 max-w-3xl mx-auto text-text_col ">
             <p class="mb-2">⚡ Develop robust and scalable frontend applications.</p>
             <p class="mb-2">⚡ Build engaging user interfaces with modern JavaScript frameworks.</p>
             <p class="mb-2">⚡ Craft efficient backend solutions with Node.js and Firebase.</p>

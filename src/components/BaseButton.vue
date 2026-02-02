@@ -10,7 +10,7 @@ export default {
         onClick: Function,
         extraClasses: {
             type: String,
-            default: "bg-pri_col mt-3 text-text_col border border-transparent hover:border-pri_col hover:bg-white hover:text-pri_col",
+            default: "bg-btn_col mt-3 text-text_col border border-transparent hover:border-btn_col hover:bg-hov_col hover:text-text_col",
         },
     },
     computed: {

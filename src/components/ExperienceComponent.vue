@@ -1,54 +1,71 @@
 <template>
-<section class="flex bg-sec_col p-4 md:p-8 flex-col md:flex-row items-center justify-center gap-x-64 font-display">
-    <div class="w-full max-w-lg">
-        <span class="text-5xl font-semibold text-pri_col">Proficiency</span>
-        <div class="w-full mt-6">
-            <div class="mb-3 text-lg font-semibold text-gray-600 dark:text-white">Js Developer</div>
-            <div class="w-full bg-gray-300 rounded-full h-6 mb-6 dark:bg-gray-700 shadow-md">
-                <div class="bg-pri_col h-6 rounded-full dark:bg-gray-300 shadow-lg " style="width: 95%"></div>
-            </div>
-            <div class="mb-3 text-lg font-semibold text-gray-600 dark:text-white">Frontend/Design</div>
-            <div class="w-full bg-gray-300 rounded-full h-6 mb-6 dark:bg-gray-700 shadow-md">
-                <div class="bg-pri_col h-6 rounded-full dark:bg-gray-300 shadow-lg " style="width: 90%"></div>
-            </div>
-            <div class="mb-3 text-lg font-semibold text-gray-600 dark:text-white">Backend Development</div>
-            <div class="w-full bg-gray-300 rounded-full h-6 mb-6 dark:bg-gray-700 shadow-md">
-                <div class="bg-pri_col h-6 rounded-full dark:bg-gray-300 shadow-lg " style="width: 80%"></div>
-            </div>
+  <section
+    class="flex flex-col items-center justify-center gap-12 px-6 py-12 md:flex-row md:gap-24 lg:gap-32 font-display"
+  >
+    <div class="w-full max-w-lg lg:max-w-xl space-y-10">
+      <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-btn_col">
+        Proficiency
+      </h2>
+
+      <div class="space-y-8">
+        <div v-for="skill in skills" :key="skill.name" class="group">
+          <div class="mb-2 flex items-baseline justify-between">
+            <span class="text-xl font-semibold text-text_col dark:text-gray-100">
+              {{ skill.name }}
+            </span>
+            <span class="text-base font-medium text-gray-500 dark:text-gray-400">
+              {{ skill.level }}%
+            </span>
+          </div>
+
+          <div class="h-4 rounded-full bg-gray-200 dark:bg-gray-700/60 shadow-inner overflow-hidden">
+            <div
+              class="h-full rounded-full bg-gradient-to-r from-btn_col via-indigo-500 to-purple-500 transition-all duration-1000 ease-out group-hover:scale-x-105 group-hover:brightness-110"
+              :style="{ width: `${skill.level}%` }"
+            ></div>
+          </div>
         </div>
+      </div>
     </div>
-    <div ref="animationContainer" class="w-[300px] h-[300px] md:w-[450px] md:h-[450px]"></div>
-</section>
+
+    <div
+      ref="lottieContainer"
+      class="w-full max-w-[320px] aspect-square md:max-w-[420px] lg:max-w-[480px]"
+      aria-hidden="true"
+    ></div>
+  </section>
 </template>
 
-<script>
-import {
-    ref,
-    onMounted
-} from "vue";
-import lottie from "lottie-web";
-import animationData from "../assets/Proficiency.json";
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import lottie from 'lottie-web'
+import proficiencyAnimation from '@/assets/Proficiency.json'
 
-export default {
-    name: "ExperienceComponent",
-    setup() {
-        const animationContainer = ref(null);
+const lottieContainer = ref(null)
+let animation = null
 
-        onMounted(() => {
-            lottie.loadAnimation({
-                container: animationContainer.value,
-                renderer: "svg",
-                loop: true,
-                autoplay: true,
-                animationData,
-            });
+const skills = [
+  { name: 'JavaScript / TypeScript', level: 95 },
+  { name: 'Frontend & UI/UX',        level: 90 },
+  { name: 'Backend & APIs',          level: 80 },
+]
 
-        });
+onMounted(() => {
+  if (!lottieContainer.value) return
 
-        return {
-            animationContainer,
+  animation = lottie.loadAnimation({
+    container: lottieContainer.value,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    animationData: proficiencyAnimation,
+  })
+})
 
-        };
-    },
-};
+onUnmounted(() => {
+  if (animation) {
+    animation.destroy()
+    animation = null
+  }
+})
 </script>

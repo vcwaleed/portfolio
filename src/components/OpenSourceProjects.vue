@@ -1,18 +1,18 @@
 <template>
-    <section class="flex items-center flex-col p-8">
-      <span class="text-5xl font-bold font-display mb-6 text-pri_col">Open Source Projects</span>
+    <section class="flex items-center flex-col p-8 px-10">
+      <span class="text-5xl font-bold font-display mb-6 text-btn_col">Open Source Projects</span>
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
         <div 
           v-for="project in selectedProjects" 
           :key="project.id"
           class="bg-sec_col p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 w-70"
         >
-          <h2 class="text-xl font-semibold text-gray-500">{{ project.name || "no name " }}</h2>
-          <p class="text-sm text-gray-300 mt-2">{{ project.description || "Visit to explore the repo" }}</p>
+          <h2 class="text-xl font-semibold text-text_col">{{ project.name || "no name " }}</h2>
+          <p class="text-sm text-text_col mt-2">{{ project.description || "Visit to explore the repo" }}</p>
           <a 
             :href="project.html_url" 
             target="_blank"
-            class="block mt-4 text-pri_col hover:underline"
+            class="block mt-4 text-btn_col hover:underline"
           >
             View on GitHub →
           </a>

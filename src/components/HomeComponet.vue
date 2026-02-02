@@ -1,4 +1,5 @@
-<template>
+<template class="bg-pri_col">
+  <div>
   <NavbarComponent />
   <AboutComponent />
   <div id="skills">
@@ -16,6 +17,7 @@
   <div id="contact"></div>
   <FooterComponent />
   <ScrollToTop />
+</div>
 </template>
 
 <script>

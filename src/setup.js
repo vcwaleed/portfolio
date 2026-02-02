@@ -3,7 +3,7 @@ export const aboutData = {
     name: "Talha Waleed",
     designation: "Front-end",
     type:"Developer",
-    description: "I am Talha Waleed, a Computer Science graduate with a strong passion for solving complex technological challenges. With expertise in React, Next.js, and Vue.js, I have worked on various projects, gaining in-depth knowledge of modern web development. I am committed to building scalable, efficient, and user-centric applications while continuously expanding my skill set in the ever-evolving tech landscape.",
+    description: "I’m a Front-end Developer specializing in Vue.js, with strong expertise in MVVM architecture, memory optimization, and building scalable, component-driven applications.I focus on creating clean, maintainable Vue code by separating business logic from UI concerns, optimizing state management (Pinia/Vuex), and designing reusable components that scale with product growth. I enjoy translating complex requirements into intuitive user experiences while keeping performance and memory efficiency top of mind.My skill set includes Vue.js, React, Next.js, TypeScript, Redux, Pinia, and Tailwind CSS, along with experience in crafting structured business logic, dynamic UI workflows, and performance-optimized front-end systems. I also leverage prompt engineering to accelerate development, improve code quality, and streamline problem-solving.",
     phoneNumber: "923065167490",
     githublink:"https://github.com/vcwaleed",
     githubUsername: "vcwaleed",

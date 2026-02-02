@@ -1,7 +1,7 @@
 <template>
-    <section class="bg-pri_col flex flex-col md:flex-row items-center justify-between font-display p-6">
+    <section class="flex flex-col md:flex-row items-center justify-between font-display p-6 px-10">
       <div class="flex flex-col w-full md:w-[50%] ">
-        <span class="text-4xl text-text_col font-bold">Reach Out to Me!</span>
+        <span class="text-4xl text-btn_col font-bold">Reach Out to Me!</span>
         <span class="text-white ">
           Feel free to reach out if you have a project in mind, or even just to say hello.
         </span>
@@ -9,16 +9,16 @@
         <div class="mt-4">
           <h3 class="text-lg text-b text-white semibold mb-2">Contact Me</h3>
           <div class="flex space-x-6">
-            <a :href="'mailto:' + about.email" target="_blank" class="text-red-500 hover:text-gray-300 text-2xl">
+            <a :href="'mailto:' + about.email" target="_blank" class="text-btn_col hover:text-gray-300 text-2xl">
               <Mail class="w-6 h-6" />
             </a>
-            <a :href="about.githublink" target="_blank" class="text-black hover:text-gray-300 text-2xl">
+            <a :href="about.githublink" target="_blank" class="text-btn_col hover:text-gray-300 text-2xl">
               <Github class="w-6 h-6" />
             </a>
-            <a :href="about.linkedin" target="_blank" class="text-blue-500 hover:text-gray-300 text-2xl">
+            <a :href="about.linkedin" target="_blank" class="text-btn_col hover:text-gray-300 text-2xl">
               <Linkedin class="w-6 h-6" />
             </a>
-            <a :href="'https://wa.me/' + about.phoneNumber" target="_blank" class="text-orange-500 hover:text-gray-300 text-2xl">
+            <a :href="'https://wa.me/' + about.phoneNumber" target="_blank" class="text-btn_col hover:text-gray-300 text-2xl">
               <PhoneCall class="w-6 h-6" />
             </a>
           </div>
