@@ -1,13 +1,5 @@
 @import "tailwindcss";
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-@theme {
-    --color-pri_col: #1E293B;
-    --color-sec_col:#1E293B;
-    --color-text_col:#ffffff;
-    --color-btn_col:#F9A826;
-    --color-hov_col:#334155;
-    --color-nav_bg: #111827;
-  }
-  @theme {
-    --font-display: "League Spartan"; 
-  }
+@import "./theme.css";
+body {
+  font-family: "Inter", sans-serif;
+}
