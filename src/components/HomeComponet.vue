@@ -18,6 +18,7 @@
     </div>
 
     <ScrollToTop />
+    <component :is="'script'" type="application/ld+json" v-html="webPageSchema"></component>
   </div>
 </template>
 
@@ -28,6 +29,8 @@ import ExperienceComponent from "./ExperienceComponent.vue";
 import OpenSourceProjects from "./OpenSourceProjects.vue";
 import FooterComponent from "./FooterComponent.vue";
 import ScrollToTop from "./ScrollToTop.vue";
+import { computed } from 'vue';
+import { useSeo } from '../composables/useSeo';
 
 export default {
   name: "HomeComponent",
@@ -39,5 +42,32 @@ export default {
     FooterComponent,
     ScrollToTop,
   },
+  setup() {
+    useSeo(); // This will pick up meta from routes.js
+
+    const webPageSchema = computed(() => JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Talha Waleed - Vue.js Developer Portfolio",
+      "url": "https://talhawaleed.online",
+      "description": "Talha Waleed's official portfolio website. Showcasing expertise in Vue.js, frontend development, and web technologies.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Talha Waleed"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://talhawaleed.online/projects?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }));
+
+    return {
+      webPageSchema
+    }
+  }
 };
 </script>

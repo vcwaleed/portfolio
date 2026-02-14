@@ -157,20 +157,53 @@
         </div>
       </div>
     </section>
+    <component :is="'script'" type="application/ld+json" v-html="personSchema"></component>
   </div>
 </template>
 
 <script setup>
-const WHATSAPP_NUMBER = "+923065167490";
+import { computed } from 'vue'
+import { useSeo } from '../composables/useSeo'
+
+const personSchema = computed(() => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Talha Waleed",
+  "url": "https://talhawaleed.online",
+  "image": "https://talhawaleed.online/linkedmatrix.png",
+  "sameAs": [
+    "https://www.linkedin.com/in/talhawaleed/",
+    "https://github.com/vcwaleed"
+  ],
+  "jobTitle": "Vue.js & Frontend Developer",
+  "worksFor": { "@type": "Organization", "name": "Freelance" },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "COMSATS University Islamabad"
+  }
+}))
+const aboutPageSchema = computed(() => ({
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Talha Waleed",
+  "url": "https://talhawaleed.online/about",
+  "description": "Learn more about Talha Waleed, a skilled Vue.js and Frontend Developer with expertise in modern web technologies."
+}))
+
+useSeo({
+  schema: [personSchema, aboutPageSchema]
+})
+
+const WHATSAPP_NUMBER = "923065167490"
 
 function scrollTo(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  const el = document.getElementById(id)
+  if (!el) return
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 function openWhatsApp() {
-  const msg = encodeURIComponent("Hi Talha! I want to discuss a project.");
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank", "noopener,noreferrer");
+  const msg = encodeURIComponent("Hi Talha! I want to discuss a project.")
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank", "noopener,noreferrer")
 }
 </script>
