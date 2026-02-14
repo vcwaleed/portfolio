@@ -11,5 +11,5 @@ createApp(App)
   .use(head)
   .mount('#app')
 
-useSeo()
+
 

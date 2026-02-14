@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script setup>
+import { useSeo } from './composables/useSeo'
+
+useSeo()
+</script>
+
 <script>
 export default {
   name: "App",
