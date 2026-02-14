@@ -30,11 +30,11 @@
 
         <div class="space-y-4">
           <p class="text-xl md:text-2xl font-semibold text-primary tracking-tight">
-            Front-End Developer | Vue.js Specialist
+            Software Engineer | AI Developer | Vue.js & Python
           </p>
           <p class="max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed">
-            Engineering scalable, high-performance web applications with a focus on user experience and
-            advanced memory optimization techniques.
+            I build scalable AI-powered and full stack products with modern frontend architecture, strong backend
+            foundations, and production-focused performance optimization.
           </p>
         </div>
 
@@ -72,16 +72,20 @@
 
             <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
               <p>
-                I am a dedicated Front-End Developer specializing in the
-                <span class="text-white font-medium">Vue.js ecosystem</span>. My expertise lies in building robust
-                <span class="text-white font-medium">MVVM architectures</span> and implementing advanced memory
-                optimization techniques to ensure seamless performance in enterprise-grade applications.
+                I am a
+                <span class="text-white font-medium">Software Engineer</span>
+                specializing in
+                <span class="text-white font-medium">Machine Learning (ML)</span>,
+                <span class="text-white font-medium">Artificial Intelligence (AI)</span>,
+                <span class="text-white font-medium">Frontend Development</span>,
+                <span class="text-white font-medium">Vue.js</span>, and
+                <span class="text-white font-medium">Python Backend Development</span>.
               </p>
 
               <p>
-                With a passion for clean code and intuitive user interfaces, I focus on crafting experiences that are
-                not only visually striking but also technically sound. I thrive on solving complex architectural
-                challenges and staying at the forefront of the ever-evolving JavaScript landscape.
+                I design and deliver full stack systems using modern frontend technologies and reliable backend
+                services. My focus is clean architecture, maintainable code, and measurable product performance across
+                web applications.
               </p>
             </div>
 
@@ -175,7 +179,23 @@ const personSchema = computed(() => ({
     "https://www.linkedin.com/in/talhawaleed/",
     "https://github.com/vcwaleed"
   ],
-  "jobTitle": "Vue.js & Frontend Developer",
+  "description": "Software Engineer specializing in Machine Learning, Artificial Intelligence, Vue.js, Frontend Development, Backend Development, Python, and Full Stack Development.",
+  "jobTitle": "Software Engineer",
+  "knowsAbout": [
+    "Machine Learning",
+    "Artificial Intelligence",
+    "Frontend Development",
+    "Vue.js",
+    "Modern Frontend Technologies",
+    "Backend Development",
+    "Python",
+    "Full Stack Development"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Software Engineer",
+    "skills": "Machine Learning, Artificial Intelligence, Vue.js, Frontend Development, Python, Backend Development, Full Stack Development"
+  },
   "worksFor": { "@type": "Organization", "name": "Freelance" },
   "alumniOf": {
     "@type": "CollegeOrUniversity",
@@ -187,7 +207,7 @@ const aboutPageSchema = computed(() => ({
   "@type": "AboutPage",
   "name": "About Talha Waleed",
   "url": "https://talhawaleed.online/about",
-  "description": "Learn more about Talha Waleed, a skilled Vue.js and Frontend Developer with expertise in modern web technologies."
+  "description": "Learn more about Talha Waleed, a Software Engineer specializing in ML, AI, Vue.js, frontend, backend, Python, and full stack development."
 }))
 
 useSeo({

@@ -48,9 +48,9 @@ export default {
     const webPageSchema = computed(() => JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Talha Waleed - Vue.js Developer Portfolio",
+      "name": "Talha Waleed - Software Engineer Portfolio",
       "url": "https://talhawaleed.online",
-      "description": "Talha Waleed's official portfolio website. Showcasing expertise in Vue.js, frontend development, and web technologies.",
+      "description": "Official portfolio of Talha Waleed, a Software Engineer specializing in ML, AI, Vue.js, frontend development, backend development, Python, and full stack systems.",
       "publisher": {
         "@type": "Person",
         "name": "Talha Waleed"

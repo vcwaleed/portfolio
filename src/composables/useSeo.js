@@ -5,9 +5,9 @@ import { useHead } from '@vueuse/head'
 const SITE = {
   name: 'Talha Waleed',
   url: 'https://talhawaleed.online',
-  defaultTitle: 'Talha Waleed - Vue.js & Frontend Developer',
+  defaultTitle: 'Talha Waleed | Software Engineer | AI/ML, Vue.js, Python',
   defaultDescription:
-    'Official Portfolio of Talha Waleed, an experienced Vue.js and Frontend Developer showcasing projects, skills, and professional experience.',
+    'Talha Waleed is a Software Engineer specializing in Machine Learning (ML), Artificial Intelligence (AI), Vue.js, Frontend Development, Backend Development, and Python.',
   defaultImage: 'https://talhawaleed.online/linkedmatrix.png',
   locale: 'en_US',
   twitterSite: '@talhawaleed'
@@ -48,6 +48,12 @@ export function useSeo(options = {}) {
     ],
 
     meta: [
+      { name: 'author', content: SITE.name },
+      {
+        name: 'keywords',
+        content:
+          'Talha Waleed, Talha Waleed Software Engineer, ML Engineer, AI Developer, Vue.js Developer, Frontend Specialist, Python Developer, Backend Developer, Full Stack Developer'
+      },
       { name: 'description', content: description.value },
       { name: 'robots', content: robots.value },
       { property: 'og:site_name', content: SITE.name },
