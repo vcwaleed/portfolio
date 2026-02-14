@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "vite": "^6.2.0",
-    "vite-plugin-prerender": "^1.0.8"
+    "vite": "^6.2.0"
   }
 }
