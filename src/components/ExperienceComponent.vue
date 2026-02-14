@@ -9,6 +9,7 @@
           Professional Experience
         </h2>
       </div>
+
       <div
         class="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary text-sm font-semibold"
       >
@@ -22,6 +23,7 @@
         class="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 hidden md:block"
       >
         <div class="absolute inset-0 bg-white/10"></div>
+
         <div
           ref="progressLine"
           class="absolute top-0 left-0 w-full origin-top"
@@ -32,15 +34,17 @@
           "
         ></div>
       </div>
+
       <div
         v-for="(item, index) in fullExperience"
-        :key="index"
+        :key="itemKey(item, index)"
         class="relative mb-20 md:flex md:justify-between md:items-center"
         :class="index % 2 !== 0 ? 'md:flex-row-reverse' : ''"
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
         :data-aos-delay="index * 120"
       >
         <div class="hidden md:block w-[45%]"></div>
+
         <div
           class="absolute left-0 md:left-1/2 size-4 bg-primary rounded-full -translate-x-1/2 border-4 z-10"
           style="
@@ -48,6 +52,7 @@
             box-shadow: 0 0 15px rgba(13, 89, 242, 0.6);
           "
         ></div>
+
         <div
           class="md:w-[45%] p-6 rounded-xl transition-all duration-300 hover:border-primary/40"
           style="
@@ -78,10 +83,11 @@
               </p>
             </div>
           </div>
+
           <ul class="space-y-3 mb-6">
             <li
               v-for="(point, i) in item.points"
-              :key="i"
+              :key="`${itemKey(item, index)}-point-${i}`"
               class="flex gap-3 text-sm text-slate-300 leading-relaxed"
             >
               <span class="text-primary mt-1 material-symbols-outlined text-xs">
@@ -90,10 +96,11 @@
               <span>{{ point }}</span>
             </li>
           </ul>
+
           <div class="flex flex-wrap gap-2">
             <span
               v-for="skill in splitSkills(item.skill_set)"
-              :key="skill"
+              :key="`${itemKey(item, index)}-skill-${skill}`"
               class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded border border-primary/20"
             >
               {{ skill }}
@@ -132,7 +139,16 @@ const openSourceExperience = {
 const fullExperience = computed(() => [...experience, openSourceExperience]);
 
 function splitSkills(skills) {
-  return (skills || "").split(",").map((s) => s.trim()).filter(Boolean);
+  return (skills || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+// ✅ stable key (better than :key="index")
+function itemKey(item, index) {
+  // if you have item.id in your data, use that instead
+  return item.id || `${item.companyname}-${item.designation}-${index}`;
 }
 
 function animateLine() {
@@ -140,7 +156,8 @@ function animateLine() {
 
   const rect = timelineWrapper.value.getBoundingClientRect();
   const windowHeight = window.innerHeight;
-  const totalHeight = rect.height;
+
+  const totalHeight = rect.height || 1; // avoid division by 0
   const visible = Math.min(Math.max(windowHeight - rect.top, 0), totalHeight);
   const progress = (visible / totalHeight) * 100;
 
@@ -150,6 +167,7 @@ function animateLine() {
 let rafId = null;
 function onScroll() {
   if (rafId) return;
+
   rafId = requestAnimationFrame(() => {
     animateLine();
     rafId = null;
@@ -157,6 +175,9 @@ function onScroll() {
 }
 
 onMounted(async () => {
+  // ✅ SSR safety
+  if (typeof window === "undefined") return;
+
   await nextTick();
 
   AOS.init({
@@ -165,11 +186,14 @@ onMounted(async () => {
     easing: "ease-out-cubic",
   });
 
-  AOS.refresh();
+  // ✅ refresh after DOM is ready
+  requestAnimationFrame(() => {
+    AOS.refresh();
+    animateLine();
+  });
 
-  animateLine();
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", animateLine);
+  window.addEventListener("resize", animateLine, { passive: true });
 });
 
 onBeforeUnmount(() => {
