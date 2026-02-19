@@ -1,0 +1,66 @@
+[
+  {
+    "id": "al-rimal-lands",
+    "name": "Al Rimal Lands",
+    "url": "https://al-rimal-lands.vercel.app/",
+    "description": "Real estate landing page with modern UI layout and responsive sections.",
+    "tags": ["Vue", "Landing Page", "Real Estate", "Tailwind"],
+    "thumbnail": "/images/uikit/al-rimal-lands.png"
+  },
+  {
+    "id": "riwaq-properties",
+    "name": "Riwaq Properties",
+    "url": "https://riwaq-properties.vercel.app/",
+    "description": "Property showcase website with clean layout and property listing components.",
+    "tags": ["Nuxt", "Real Estate", "Responsive", "SEO"],
+    "thumbnail": "/images/uikit/riwaq-properties.png"
+  },
+  {
+    "id": "al-noor-jewellery",
+    "name": "Al Noor Jewellery",
+    "url": "https://al-noor-jewellery.vercel.app/",
+    "description": "Luxury jewellery website UI with elegant product presentation.",
+    "tags": ["Vue", "Ecommerce", "Branding", "Animation"],
+    "thumbnail": "/images/uikit/al-noor-jewellery.png"
+  },
+  {
+    "id": "neon-forge",
+    "name": "Neon Forge",
+    "url": "https://neon-forge-five.vercel.app/",
+    "description": "Creative modern UI design with bold typography and interactive layout.",
+    "tags": ["React", "Creative", "Motion", "Landing Page"],
+    "thumbnail": "/images/uikit/neon-forge.png"
+  },
+  {
+    "id": "bookmycure",
+    "name": "BookMyCure",
+    "url": "https://bookmycure.vercel.app/",
+    "description": "Healthcare booking UI with appointment and service-focused design.",
+    "tags": ["Next.js", "Healthcare", "Firebase", "Booking"],
+    "thumbnail": "/images/uikit/bookmycure.png"
+  },
+  {
+    "id": "nextleap-digital",
+    "name": "NextLeap Digital",
+    "url": "https://www.nextleapdigital.online/",
+    "description": "Digital agency website UI with strong branding and structured sections.",
+    "tags": ["Next.js", "Agency", "Marketing", "CMS"],
+    "thumbnail": "/images/uikit/nextleap-digital.png"
+  },
+  {
+    "id": "trustworthy",
+    "name": "Trustworthy",
+    "url": "https://trustworthy-ruddy.vercel.app/",
+    "description": "Clean corporate-style UI layout with modern components.",
+    "tags": ["React", "Corporate", "SaaS", "UI System"],
+    "thumbnail": "/images/uikit/trustworthy.png"
+  },
+  {
+  "id": "popkon-saling",
+  "name": "Popkon Saling",
+  "url": "https://stitch-zeta-ten.vercel.app/",
+  "description": "Modern product-focused website for Popkon Saling featuring a vibrant layout, promotional sections, and engaging call-to-action components.",
+  "tags": ["Product Website", "Snack Brand", "Marketing", "Landing Page", "UI Design"],
+  "thumbnail": "/images/uikit/popkon-saling.png"
+}
+]

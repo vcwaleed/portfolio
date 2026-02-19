@@ -25,6 +25,9 @@
         <button class="text-sm font-medium hover:text-primary transition-colors cursor-pointer" @click="scrollToSection('contact')">
           Contact
         </button>
+        <RouterLink to="/ui-kit" class="text-sm font-medium hover:text-primary transition-colors">
+          Showcase
+        </RouterLink>
       </div>
 
       <div class="flex items-center gap-4">
@@ -40,9 +43,22 @@
 </template>
 
 <script setup>
+import { nextTick } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
 const NAV_HEIGHT = 96;
 
-function scrollToSection(id) {
+const router = useRouter()
+const route = useRoute()
+
+async function scrollToSection(id) {
+  if (route.path !== '/') {
+    await router.push('/')
+    await nextTick()
+    setTimeout(() => scrollToSection(id), 60)
+    return
+  }
+
   if (id === "home") {
     window.scrollTo({ top: 0, behavior: "smooth" });
     return;

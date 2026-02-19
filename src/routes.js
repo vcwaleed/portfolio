@@ -134,6 +134,17 @@ const routes = [
     }
   },
   {
+    name: 'Showcase',
+    path: '/ui-kit',
+    component: () => import('./components/UIKitComponent.vue'),
+    meta: {
+      title: 'Landing Page Showcase | Talha Waleed',
+      description: 'Browse landing pages, product websites, and UI showcase projects built by Talha Waleed.',
+      image: 'https://talhawaleed.online/linkedmatrix.png',
+      robots: 'index,follow'
+    }
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'NotFound',
     component: { template: '<div>404 Page Not Found</div>' },
