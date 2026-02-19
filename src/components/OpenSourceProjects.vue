@@ -55,7 +55,7 @@
               </p>
             </div>
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-6">
+              class="absolute inset-0 bg-linear-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-end p-6">
               <div class="flex gap-3 w-full">
                 <span
                   class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2">
@@ -112,7 +112,7 @@
           <h2 class="text-2xl font-bold tracking-tight text-white">
             GitHub Activity
           </h2>
-          <p class="text-slate-400 text-sm break-words">
+          <p class="text-slate-400 text-sm wrap-break-word">
             @{{ githubUsername }} • {{ displayRepoCount }} repos
           </p>
           <p v-if="errorMsg" class="text-red-500 text-xs mt-1">{{ errorMsg }}</p>
@@ -185,7 +185,7 @@
               <div
                 v-for="(lvl, i) in heatmap"
                 :key="i"
-                class="rounded-[2px] w-2 h-2 sm:w-[9px] sm:h-[9px] md:w-[11px] md:h-[11px]"
+                class="rounded-xs w-2 h-2 sm:w-2.25 sm:h-2.25 md:w-2.75 md:h-2.75"
                 :class="heatClass(lvl)"
               ></div>
             </div>

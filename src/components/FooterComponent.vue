@@ -107,7 +107,7 @@
 
               <div
                 class="relative rounded-2xl p-6 border border-white/10
-                       bg-white/[0.03] backdrop-blur-xl"
+                       bg-white/3 backdrop-blur-xl"
               >
                 <div class="flex flex-col items-center gap-4">
                   <div

@@ -16,3 +16,18 @@ body {
   min-height: 100vh;
   background-color: #0a0e19;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  [role="button"] {
+    cursor: none !important;
+  }
+
+  input,
+  textarea,
+  [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
