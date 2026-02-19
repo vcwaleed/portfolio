@@ -61,7 +61,7 @@
         <div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
       </div>
     </main>
-    <section class="py-24 px-6 relative bg-background-light dark:bg-background-dark overflow-x-hidden">
+    <section class="py-24 px-6 relative bg-background-dark overflow-x-hidden">
       <div class="max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-12 gap-16 items-start">
           <div class="lg:col-span-7 space-y-10">
@@ -121,7 +121,7 @@
                   class="w-full h-full rounded-xl bg-slate-800/50 flex flex-col items-center justify-center text-center gap-4 border border-dashed border-slate-700"
                 >
                   <span class="material-symbols-outlined text-6xl text-slate-700">developer_mode_tv</span>
-                  <p class="text-slate-600 font-medium">
+                  <p class="text-slate-400 font-medium">
                     Visualizing complex systems through elegant code.
                   </p>
                 </div>

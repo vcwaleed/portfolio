@@ -1,14 +1,14 @@
 <template>
-  <main class="contact">
-    <h1>Contact Talha Waleed - Software Engineer</h1>
+  <main class="contact text-slate-100">
+    <h1 class="text-3xl font-bold text-white">Contact Talha Waleed - Software Engineer</h1>
     <p>
       Available for ML Engineer, AI Developer, Vue.js Developer, Frontend Specialist, Python Developer, Backend
       Developer, and Full Stack Developer opportunities.
     </p>
 
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:talhawaleed460@gmail.com">talhawaleed460@gmail.com</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/talhawaleed/" target="_blank" rel="noopener">talhawaleed</a></li>
+    <ul class="space-y-2">
+      <li><strong>Email:</strong> <a class="text-primary hover:underline" href="mailto:talhawaleed460@gmail.com">talhawaleed460@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a class="text-primary hover:underline" href="https://www.linkedin.com/in/talhawaleed/" target="_blank" rel="noopener">talhawaleed</a></li>
     </ul>
   </main>
 </template>
@@ -30,8 +30,12 @@ useSeo({ schema: [contactSchema] })
 
 <style scoped>
 .contact {
-  padding: 20px;
+  padding: 32px 20px;
   max-width: 900px;
   margin: 0 auto;
+  min-height: 100vh;
+  background-color: #0a0e19;
+  color: #f1f5f9;
+  line-height: 1.6;
 }
 </style>

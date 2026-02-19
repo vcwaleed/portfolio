@@ -1,5 +1,18 @@
 @import "tailwindcss";
 @import "./theme.css";
+
+html {
+  color-scheme: dark;
+  background-color: #0a0e19;
+}
+
 body {
   font-family: "Inter", sans-serif;
+  background-color: #0a0e19;
+  color: #f1f5f9;
+}
+
+#app {
+  min-height: 100vh;
+  background-color: #0a0e19;
 }

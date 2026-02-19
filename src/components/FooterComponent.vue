@@ -1,10 +1,10 @@
 <template>
-  <footer class="relative mt-24 border-t border-slate-200/40 dark:border-white/10 font-display">
+  <footer class="relative mt-24 border-t border-white/10 font-display">
     <div class="absolute inset-0 bg-primary/5 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-6 py-14">
       <div
-        class="rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/[0.03]
+        class="rounded-2xl border border-white/10
                backdrop-blur-xl p-8 md:p-10"
       >
         <div class="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -14,11 +14,11 @@
               Contact
             </div>
 
-            <h3 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+            <h3 class="text-3xl md:text-4xl font-black tracking-tight text-white">
               Reach Out to Me!
             </h3>
 
-            <p class="text-slate-600 dark:text-slate-400 max-w-xl">
+            <p class="text-slate-400 max-w-xl">
               Feel free to reach out if you have a project in mind, or even just to say hello.
             </p>
 
@@ -30,8 +30,8 @@
 
               <a
                 :href="`mailto:${about.email}`"
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10
-                       text-slate-700 dark:text-slate-300 text-xs font-bold hover:border-primary/40 hover:text-primary transition-colors"
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10
+                       text-slate-300 text-xs font-bold hover:border-primary/40 hover:text-primary transition-colors"
               >
                 <span class="material-symbols-outlined text-sm">alternate_email</span>
                 {{ about.email }}
@@ -49,44 +49,44 @@
                   :href="`mailto:${about.email}`"
                   target="_blank"
                   class="group inline-flex items-center justify-center w-11 h-11 rounded-xl
-                         bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10
+                         bg-white/5 border border-white/10
                          hover:border-primary/40 transition-colors"
                   aria-label="Email"
                 >
-                  <Mail class="w-5 h-5 text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors" />
+                  <Mail class="w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
                 </a>
 
                 <a
                   :href="about.githublink"
                   target="_blank"
                   class="group inline-flex items-center justify-center w-11 h-11 rounded-xl
-                         bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10
+                         bg-white/5 border border-white/10
                          hover:border-primary/40 transition-colors"
                   aria-label="GitHub"
                 >
-                  <Github class="w-5 h-5 text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors" />
+                  <Github class="w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
                 </a>
 
                 <a
                   :href="about.linkedin"
                   target="_blank"
                   class="group inline-flex items-center justify-center w-11 h-11 rounded-xl
-                         bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10
+                         bg-white/5 border border-white/10
                          hover:border-primary/40 transition-colors"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin class="w-5 h-5 text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors" />
+                  <Linkedin class="w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
                 </a>
 
                 <a
                   :href="`https://wa.me/${about.phoneNumber}`"
                   target="_blank"
                   class="group inline-flex items-center justify-center w-11 h-11 rounded-xl
-                         bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10
+                         bg-white/5 border border-white/10
                          hover:border-primary/40 transition-colors"
                   aria-label="WhatsApp"
                 >
-                  <PhoneCall class="w-5 h-5 text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors" />
+                  <PhoneCall class="w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
                 </a>
               </div>
             </div>
@@ -106,13 +106,13 @@
               <div class="absolute -inset-6 bg-primary/20 blur-[70px] rounded-full"></div>
 
               <div
-                class="relative rounded-2xl p-6 border border-slate-200/60 dark:border-white/10
-                       bg-white/70 dark:bg-white/[0.03] backdrop-blur-xl"
+                class="relative rounded-2xl p-6 border border-white/10
+                       bg-white/[0.03] backdrop-blur-xl"
               >
                 <div class="flex flex-col items-center gap-4">
                   <div
                     class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/30 overflow-hidden
-                           shadow-xl shadow-primary/10 bg-slate-200 dark:bg-slate-800"
+                           shadow-xl shadow-primary/10 bg-slate-800"
                   >
                     <img
                       v-if="githubProfileImage"
@@ -126,7 +126,7 @@
                   </div>
 
                   <div class="text-center">
-                    <p class="text-lg font-bold text-slate-900 dark:text-white">
+                    <p class="text-lg font-bold text-white">
                       {{ about.name || 'vcwaleed' }}
                     </p>
                     <a
@@ -139,9 +139,9 @@
                     </a>
                   </div>
 
-                  <div class="w-full h-px bg-slate-200 dark:bg-white/10"></div>
+                  <div class="w-full h-px bg-white/10"></div>
 
-                  <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
+                  <p class="text-xs text-slate-400 text-center">
                     © {{ new Date().getFullYear() }} {{ about.name || 'Talha Waleed' }}. Built with Vue + Tailwind.
                   </p>
                 </div>
@@ -150,18 +150,18 @@
           </div>
         </div>
         <div class="mt-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p class="text-xs text-slate-500 dark:text-slate-400">
+          <p class="text-xs text-slate-400">
             Designed for clean UI, micro-interactions, and accessibility.
           </p>
 
           <div class="flex items-center gap-5 text-xs font-semibold">
-            <a :href="about.githublink" target="_blank" class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+            <a :href="about.githublink" target="_blank" class="text-slate-400 hover:text-primary transition-colors">
               GitHub
             </a>
-            <a :href="about.linkedin" target="_blank" class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+            <a :href="about.linkedin" target="_blank" class="text-slate-400 hover:text-primary transition-colors">
               LinkedIn
             </a>
-            <a :href="`mailto:${about.email}`" class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+            <a :href="`mailto:${about.email}`" class="text-slate-400 hover:text-primary transition-colors">
               Email
             </a>
           </div>

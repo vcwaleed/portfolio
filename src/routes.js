@@ -147,7 +147,7 @@ const routes = [
   {
     path: '/:catchAll(.*)',
     name: 'NotFound',
-    component: { template: '<div>404 Page Not Found</div>' },
+    component: { template: '<div class="min-h-screen bg-background-dark text-slate-100 flex items-center justify-center text-xl font-semibold">404 Page Not Found</div>' },
     meta: {
       title: '404 - Page Not Found',
       description: 'The page you are looking for does not exist.',

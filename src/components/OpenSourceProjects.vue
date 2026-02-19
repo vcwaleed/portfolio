@@ -4,33 +4,33 @@
     <section id="projects">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div class="max-w-2xl space-y-4">
-          <h2 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white">
             Featured Projects
           </h2>
 
-          <p class="text-slate-600 dark:text-slate-400 text-lg">
+          <p class="text-slate-400 text-lg">
             Real-world projects I’ve built and deployed. Live previews (if the site allows embedding).
           </p>
         </div>
         <div
-          class="flex gap-2 bg-slate-100 dark:bg-[#161b26] p-1 rounded-xl border border-slate-200 dark:border-[#282e39]">
+          class="flex gap-2 bg-[#161b26] p-1 rounded-xl border border-[#282e39]">
           <button class="px-4 py-2 text-sm font-bold rounded-lg transition-colors" :class="activeFilter === 'all'
-              ? 'bg-white dark:bg-primary text-slate-900 dark:text-slate-900 shadow-sm'
-              : 'text-slate-500 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white'
+              ? 'bg-primary text-slate-900 shadow-sm'
+              : 'text-slate-300 hover:text-white'
             " @click="activeFilter = 'all'">
             All
           </button>
 
           <button class="px-4 py-2 text-sm font-bold rounded-lg transition-colors" :class="activeFilter === 'web'
-              ? 'bg-white dark:bg-primary text-slate-900 dark:text-slate-900 shadow-sm'
-              : 'text-slate-500 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white'
+              ? 'bg-primary text-slate-900 shadow-sm'
+              : 'text-slate-300 hover:text-white'
             " @click="activeFilter = 'web'">
             Web Apps
           </button>
 
           <button class="px-4 py-2 text-sm font-bold rounded-lg transition-colors" :class="activeFilter === 'ui'
-              ? 'bg-white dark:bg-primary text-slate-900 dark:text-slate-900 shadow-sm'
-              : 'text-slate-500 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white'
+              ? 'bg-primary text-slate-900 shadow-sm'
+              : 'text-slate-300 hover:text-white'
             " @click="activeFilter = 'ui'">
             UI Kits
           </button>
@@ -39,18 +39,18 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <a v-for="p in filteredLiveProjects" :key="p.url" :href="p.url" target="_blank" rel="noopener"
-          class="group relative flex flex-col bg-white dark:bg-[#161b26] rounded-2xl border border-slate-200 dark:border-[#282e39] overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
-          <div class="relative aspect-video overflow-hidden bg-slate-200 dark:bg-slate-800">
+          class="group relative flex flex-col bg-[#161b26] rounded-2xl border border-[#282e39] overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
+          <div class="relative aspect-video overflow-hidden bg-slate-800">
             <iframe class="absolute inset-0 w-full h-full pointer-events-none" :src="p.url" loading="lazy"
               referrerpolicy="no-referrer" @error="markPreviewFailed(p.url)"></iframe>
-            <div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
             <div v-if="previewFailed.has(p.url)"
-              class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 bg-slate-200 dark:bg-slate-800">
+              class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 bg-slate-800">
               <span class="material-symbols-outlined text-4xl text-slate-400">visibility_off</span>
-              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              <p class="mt-2 text-sm text-slate-400">
                 Preview not available (site blocks iframe).
               </p>
-              <p class="text-xs text-slate-500 dark:text-slate-500">
+              <p class="text-xs text-slate-500">
                 Click to open live demo.
               </p>
             </div>
@@ -73,19 +73,19 @@
           </div>
           <div class="p-6 space-y-4">
             <div class="flex justify-between items-start">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+              <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">
                 {{ p.title }}
               </h3>
               <span class="text-xs font-mono text-slate-400">{{ p.year }}</span>
             </div>
 
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            <p class="text-slate-400 text-sm leading-relaxed">
               {{ p.description }}
             </p>
 
             <div class="flex flex-wrap gap-2 pt-2">
               <span v-for="tag in p.tags" :key="tag"
-                class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-bold uppercase tracking-widest text-slate-600 dark:text-slate-400">
+                class="px-2.5 py-1 rounded bg-slate-800 text-[10px] font-bold uppercase tracking-widest text-slate-400">
                 {{ tag }}
               </span>
             </div>
@@ -109,10 +109,10 @@
         </div>
 
         <div class="min-w-0">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+          <h2 class="text-2xl font-bold tracking-tight text-white">
             GitHub Activity
           </h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm break-words">
+          <p class="text-slate-400 text-sm break-words">
             @{{ githubUsername }} • {{ displayRepoCount }} repos
           </p>
           <p v-if="errorMsg" class="text-red-500 text-xs mt-1">{{ errorMsg }}</p>
@@ -133,7 +133,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
       <!-- Top Languages -->
       <div
-        class="lg:col-span-4 bg-white dark:bg-[#161b26] border border-slate-200 dark:border-[#282e39] p-5 sm:p-6 rounded-2xl space-y-6"
+        class="lg:col-span-4 bg-[#161b26] border border-[#282e39] p-5 sm:p-6 rounded-2xl space-y-6"
       >
         <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400">
           Top Languages
@@ -141,12 +141,12 @@
 
         <div class="space-y-5">
           <div v-for="l in customLanguages" :key="l.name" class="space-y-2">
-            <div class="flex justify-between text-sm text-slate-900 dark:text-white">
+            <div class="flex justify-between text-sm text-white">
               <span class="font-medium">{{ l.name }}</span>
               <span class="font-bold text-primary">{{ l.percent }}%</span>
             </div>
 
-            <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
               <div class="h-full" :class="l.barClass" :style="{ width: `${l.percent}%` }"></div>
             </div>
           </div>
@@ -157,7 +157,7 @@
       <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Commit History (mobile scroll) -->
         <div
-          class="md:col-span-2 bg-white dark:bg-[#161b26] border border-slate-200 dark:border-[#282e39] p-5 sm:p-6 rounded-2xl"
+          class="md:col-span-2 bg-[#161b26] border border-[#282e39] p-5 sm:p-6 rounded-2xl"
         >
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
             <h3 class="text-sm font-bold uppercase tracking-widest text-slate-400">
@@ -191,7 +191,7 @@
             </div>
           </div>
 
-          <p class="mt-2 text-[11px] text-slate-500 sm:hidden">
+          <p class="mt-2 text-[11px] text-slate-400 sm:hidden">
             Tip: swipe left/right to view full year
           </p>
         </div>
@@ -202,12 +202,12 @@
           :key="r.id"
           :href="r.html_url"
           target="_blank"
-          class="bg-white dark:bg-[#161b26] border border-slate-200 dark:border-[#282e39] p-5 rounded-xl hover:border-primary/40 transition-colors group cursor-pointer block"
+          class="bg-[#161b26] border border-[#282e39] p-5 rounded-xl hover:border-primary/40 transition-colors group cursor-pointer block"
         >
           <div class="flex justify-between items-start mb-3">
             <div class="flex items-center gap-2 min-w-0">
               <span class="material-symbols-outlined text-slate-400 text-lg shrink-0">folder</span>
-              <h4 class="font-bold text-slate-900 dark:text-white group-hover:text-primary truncate">
+              <h4 class="font-bold text-white group-hover:text-primary truncate">
                 {{ r.name }}
               </h4>
             </div>
@@ -218,7 +218,7 @@
             </div>
           </div>
 
-          <p class="text-slate-600 dark:text-slate-400 text-xs line-clamp-2">
+          <p class="text-slate-400 text-xs line-clamp-2">
             {{ r.description || "Visit to explore the repo" }}
           </p>
 

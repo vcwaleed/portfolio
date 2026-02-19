@@ -4,12 +4,10 @@ export default {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
         primary: "var(--color-primary)",
-        "background-light": "var(--color-background-light)",
         "background-dark": "var(--color-background-dark)",
       },
       fontFamily: {
