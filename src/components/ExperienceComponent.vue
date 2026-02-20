@@ -245,6 +245,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .experience-section {
   position: relative;
+  overflow-x: hidden;
 }
 
 .experience-glow {
